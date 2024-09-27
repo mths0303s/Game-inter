@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://drxmejmdevt6x"]
+[gd_scene load_steps=34 format=3 uid="uid://drxmejmdevt6x"]
 
 [ext_resource type="Texture2D" uid="uid://cwmggn0a4jt0g" path="res://Assets/Terrain/Terrain (16x16).png" id="1_6bteh"]
 [ext_resource type="Script" path="res://Scripts/word.gd" id="1_thlgv"]
@@ -10,6 +10,7 @@
 [ext_resource type="Script" path="res://Scripts/hud_manager.gd" id="8_nw37l"]
 [ext_resource type="Texture2D" uid="uid://dcidruq5fiwup" path="res://Assets/Items/Fruits/Apple.png" id="9_87riy"]
 [ext_resource type="PackedScene" uid="uid://cdvvn0fs502qf" path="res://actors/checkpint.tscn" id="10_jyl42"]
+[ext_resource type="PackedScene" uid="uid://218hum1qs0r8" path="res://actors/pause_menu.tscn" id="11_ai72w"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uum3"]
 texture = ExtResource("1_6bteh")
@@ -1070,6 +1071,8 @@ vertical_alignment = 1
 
 [node name="checkpint" parent="." instance=ExtResource("10_jyl42")]
 position = Vector2(2007, -323)
+
+[node name="pause_menu" parent="." instance=ExtResource("11_ai72w")]
 
 [connection signal="body_entered" from="fire area" to="fire area" method="_on_body_entered"]
 [connection signal="body_entered" from="fire area2" to="fire area2" method="_on_body_entered"]
