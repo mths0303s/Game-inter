@@ -992,7 +992,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_nw37l")
-default_seconds = 5
 
 [node name="clock_timer" type="Timer" parent="HUD/control"]
 autostart = true
