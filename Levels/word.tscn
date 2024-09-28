@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://drxmejmdevt6x"]
+[gd_scene load_steps=37 format=3 uid="uid://drxmejmdevt6x"]
 
 [ext_resource type="Texture2D" uid="uid://cwmggn0a4jt0g" path="res://Assets/Terrain/Terrain (16x16).png" id="1_6bteh"]
 [ext_resource type="Script" path="res://Scripts/word.gd" id="1_thlgv"]
@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dcidruq5fiwup" path="res://Assets/Items/Fruits/Apple.png" id="9_87riy"]
 [ext_resource type="PackedScene" uid="uid://cdvvn0fs502qf" path="res://actors/checkpint.tscn" id="10_jyl42"]
 [ext_resource type="PackedScene" uid="uid://218hum1qs0r8" path="res://actors/pause_menu.tscn" id="11_ai72w"]
+[ext_resource type="PackedScene" uid="uid://h75oguy46pdx" path="res://actors/goal.tscn" id="12_puafd"]
+[ext_resource type="Shader" path="res://Scripts/word.gdshader" id="13_ppvjc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uum3"]
 texture = ExtResource("1_6bteh")
@@ -868,6 +870,13 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_sn8ti"]
+shader = ExtResource("13_ppvjc")
+shader_parameter/lines = 10.0
+shader_parameter/threshold = 1.0
+shader_parameter/line_color_a = Color(1, 1, 1, 1)
+shader_parameter/line_color_b = Color(0, 0, 0, 1)
+
 [node name="Word" type="Node2D"]
 position = Vector2(298, 144)
 script = ExtResource("1_thlgv")
@@ -1073,6 +1082,24 @@ vertical_alignment = 1
 position = Vector2(2007, -323)
 
 [node name="pause_menu" parent="." instance=ExtResource("11_ai72w")]
+
+[node name="goal" parent="." instance=ExtResource("12_puafd")]
+position = Vector2(26, 158)
+
+[node name="transition" type="CanvasLayer" parent="."]
+
+[node name="color_rect" type="ColorRect" parent="transition"]
+material = SubResource("ShaderMaterial_sn8ti")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -16.0
+offset_right = 1.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
 
 [connection signal="body_entered" from="fire area" to="fire area" method="_on_body_entered"]
 [connection signal="body_entered" from="fire area2" to="fire area2" method="_on_body_entered"]

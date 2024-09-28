@@ -19,3 +19,4 @@ func activate_checkpoint():
 func _on_anim_animation_finished():
 	if anim.animation == "Out":
 		anim.play("Idle")
+		get_tree().quit()
