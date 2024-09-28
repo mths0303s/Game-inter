@@ -10,9 +10,10 @@ func _on_body_entered(body):
 	anim.play("moving")
 	if body.name == "player" and !next_level == "":
 		transition.change_scene(next_level)
-		transition.show_new_scene()
+		
 	else:
 		print("No scene loaded")
+		transition.show_new_scene()
 
 
 func _on_body_exited(body):

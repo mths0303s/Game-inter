@@ -724,15 +724,10 @@ next_level = "res://Levels/word.tscn"
 script = ExtResource("13_exq2c")
 
 [node name="color_rect" type="ColorRect" parent="transition"]
-visible = false
 material = SubResource("ShaderMaterial_sn8ti")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -16.0
-offset_right = 1.0
-offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
