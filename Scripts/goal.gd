@@ -8,7 +8,7 @@ func _on_body_entered(body):
 	print("O player encontrou o troféu!")
 	anim.play("moving")
 	if body.name == "player" and !next_level == "":
-		transition.change_scene()
+		transition.change_scene(next_level)
 	else:
 		print("No scene loaded")
 
