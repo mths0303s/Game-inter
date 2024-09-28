@@ -718,21 +718,16 @@ position = Vector2(2007, -323)
 
 [node name="goal" parent="." instance=ExtResource("12_puafd")]
 position = Vector2(-90, 92)
-next_level = "\"res://Levels/word-1.tscn\""
+next_level = "res://Levels/word-1.tscn"
 
 [node name="transition" type="CanvasLayer" parent="."]
 script = ExtResource("13_0vw0w")
 
 [node name="color_rect" type="ColorRect" parent="transition"]
-visible = false
 material = SubResource("ShaderMaterial_sn8ti")
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 1.0
-offset_top = -16.0
-offset_right = 1.0
-offset_bottom = -16.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)

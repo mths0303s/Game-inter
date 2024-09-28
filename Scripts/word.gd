@@ -4,6 +4,7 @@ extends Node2D
 @onready var player_scene = preload("res://actors/player.tscn")
 @onready var camera := $camera as Camera2D
 @onready var control = $HUD/control
+@onready var transition: CanvasLayer = $transition
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

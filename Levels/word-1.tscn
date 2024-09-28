@@ -586,7 +586,7 @@ position = Vector2(215, -53)
 position = Vector2(988, 66)
 
 [node name="player" parent="." instance=ExtResource("5_3lf42")]
-position = Vector2(-281, -70)
+position = Vector2(570, 175)
 
 [node name="fire area" type="Area2D" parent="."]
 position = Vector2(380, 186)
@@ -718,6 +718,7 @@ position = Vector2(2007, -323)
 
 [node name="goal" parent="." instance=ExtResource("12_il66v")]
 position = Vector2(663, 125)
+next_level = "res://Levels/word.tscn"
 
 [node name="transition" type="CanvasLayer" parent="."]
 script = ExtResource("13_exq2c")
