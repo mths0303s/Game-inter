@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://b7gmdl44s5olx" path="res://Assets/Items/Checkpoints/End/End (Pressed) (64x64).png" id="2_mt3hq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r7w61"]
-size = Vector2(62, 45)
+size = Vector2(50, 45)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ovd6o"]
 atlas = ExtResource("1_kuvcv")
