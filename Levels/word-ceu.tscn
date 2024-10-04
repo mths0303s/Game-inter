@@ -1045,7 +1045,7 @@ position = Vector2(-1093, 522)
 position = Vector2(-1283, 530)
 
 [node name="player" parent="." instance=ExtResource("5_fogos")]
-position = Vector2(6005, -522)
+position = Vector2(1619, -310)
 
 [node name="fire area" type="Area2D" parent="."]
 position = Vector2(3573, -533)
