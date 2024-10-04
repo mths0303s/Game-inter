@@ -18,8 +18,12 @@ func _on_body_entered(body):
 
 func _on_body_exited(body):
 	print("O player deixou o troféu!")
-	anim.play("idle")
 
 func show_new_scene():
 	var show_transition = get_tree().create_tween()
 	show_transition.tween_property(color_rect, "threshold", 0.0, 0.5).from(1.0)
+
+
+func _on_anim_animation_finished():
+	if anim.animation == "moving":
+		anim.play("static")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://cllwbhhs7agy0"]
+[gd_scene load_steps=38 format=3 uid="uid://cllwbhhs7agy0"]
 
 [ext_resource type="Script" path="res://Scripts/word.gd" id="1_k0vb3"]
 [ext_resource type="Texture2D" uid="uid://cwmggn0a4jt0g" path="res://Assets/Terrain/Terrain (16x16).png" id="2_qqcuv"]
@@ -9,7 +9,6 @@
 [ext_resource type="Texture2D" uid="uid://b1gwxhqhkgmkh" path="res://Assets/Traps/Fire/On (16x32).png" id="7_bxqo5"]
 [ext_resource type="Script" path="res://Scripts/hud_manager.gd" id="8_yo1bb"]
 [ext_resource type="Texture2D" uid="uid://dcidruq5fiwup" path="res://Assets/Items/Fruits/Apple.png" id="9_8mpn8"]
-[ext_resource type="PackedScene" uid="uid://cdvvn0fs502qf" path="res://actors/checkpint.tscn" id="10_f2jom"]
 [ext_resource type="PackedScene" uid="uid://218hum1qs0r8" path="res://actors/pause_menu.tscn" id="11_3gcbb"]
 [ext_resource type="PackedScene" uid="uid://h75oguy46pdx" path="res://actors/goal.tscn" id="12_kyx8o"]
 [ext_resource type="Script" path="res://Scripts/transition.gd" id="13_w01vq"]
@@ -997,10 +996,10 @@ position = Vector2(256, -234)
 position = Vector2(257, -267)
 
 [node name="fruit35" parent="Fruits" instance=ExtResource("4_xpy3g")]
-position = Vector2(462, -143)
+position = Vector2(461, -139)
 
 [node name="player" parent="." instance=ExtResource("5_p8uwq")]
-position = Vector2(1629, -347)
+position = Vector2(-282, -66)
 
 [node name="fire area" type="Area2D" parent="."]
 position = Vector2(380, 186)
@@ -1125,20 +1124,16 @@ text = "00.00"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="checkpint" parent="." instance=ExtResource("10_f2jom")]
-position = Vector2(2500, -323)
-
 [node name="pause_menu" parent="." instance=ExtResource("11_3gcbb")]
 
 [node name="goal" parent="." instance=ExtResource("12_kyx8o")]
-position = Vector2(2431, -324)
+position = Vector2(2494, -323)
 next_level = "res://Levels/word-ceu.tscn"
 
 [node name="transition" type="CanvasLayer" parent="."]
 script = ExtResource("13_w01vq")
 
 [node name="color_rect" type="ColorRect" parent="transition"]
-visible = false
 material = SubResource("ShaderMaterial_sn8ti")
 anchors_preset = 15
 anchor_right = 1.0

@@ -10,9 +10,9 @@
 [ext_resource type="Script" path="res://Scripts/hud_manager.gd" id="8_xom0l"]
 [ext_resource type="Texture2D" uid="uid://dcidruq5fiwup" path="res://Assets/Items/Fruits/Apple.png" id="9_2chqu"]
 [ext_resource type="PackedScene" uid="uid://218hum1qs0r8" path="res://actors/pause_menu.tscn" id="11_8k7ih"]
-[ext_resource type="PackedScene" uid="uid://h75oguy46pdx" path="res://actors/goal.tscn" id="12_f18tu"]
 [ext_resource type="Script" path="res://Scripts/transition.gd" id="13_skn8l"]
 [ext_resource type="Shader" path="res://Scripts/word.gdshader" id="14_f3taq"]
+[ext_resource type="PackedScene" uid="uid://dwf1kvn7nq552" path="res://actors/GoalFinished.tscn" id="14_y4jyf"]
 [ext_resource type="Script" path="res://Scripts/color_rect.gd" id="15_uest0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7uum3"]
@@ -1027,10 +1027,25 @@ position = Vector2(1265, 81)
 position = Vector2(745, 101)
 
 [node name="fruit45" parent="Fruits" instance=ExtResource("4_wn1e2")]
-position = Vector2(763, 190)
+position = Vector2(-207, 214)
+
+[node name="fruit46" parent="Fruits" instance=ExtResource("4_wn1e2")]
+position = Vector2(-435, 210)
+
+[node name="fruit47" parent="Fruits" instance=ExtResource("4_wn1e2")]
+position = Vector2(-737, 312)
+
+[node name="fruit48" parent="Fruits" instance=ExtResource("4_wn1e2")]
+position = Vector2(-943, 438)
+
+[node name="fruit49" parent="Fruits" instance=ExtResource("4_wn1e2")]
+position = Vector2(-1093, 522)
+
+[node name="fruit50" parent="Fruits" instance=ExtResource("4_wn1e2")]
+position = Vector2(-1283, 530)
 
 [node name="player" parent="." instance=ExtResource("5_fogos")]
-position = Vector2(1803, -307)
+position = Vector2(6005, -522)
 
 [node name="fire area" type="Area2D" parent="."]
 position = Vector2(3573, -533)
@@ -1078,6 +1093,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("8_xom0l")
+default_seconds = 20
 
 [node name="clock_timer" type="Timer" parent="HUD/control"]
 autostart = true
@@ -1156,15 +1172,10 @@ vertical_alignment = 1
 
 [node name="pause_menu" parent="." instance=ExtResource("11_8k7ih")]
 
-[node name="goal" parent="." instance=ExtResource("12_f18tu")]
-position = Vector2(6191, -596)
-next_level = "res://Levels/word-profundo.tscn"
-
 [node name="transition" type="CanvasLayer" parent="."]
 script = ExtResource("13_skn8l")
 
 [node name="color_rect" type="ColorRect" parent="transition"]
-visible = false
 material = SubResource("ShaderMaterial_sn8ti")
 anchors_preset = 15
 anchor_right = 1.0
@@ -1173,6 +1184,10 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 script = ExtResource("15_uest0")
+
+[node name="goal2" parent="." instance=ExtResource("14_y4jyf")]
+position = Vector2(6190, -596)
+next_level = "res://actors/Tile_screen.tscn"
 
 [connection signal="body_entered" from="fire area" to="fire area" method="_on_body_entered"]
 [connection signal="body_entered" from="fire area2" to="fire area2" method="_on_body_entered"]
